@@ -18,7 +18,7 @@ const PostFilter = () => {
   }, []);
 
   return (
-    <div>
+    <div className='page3'>
         <div className="post-filter">
           <button><Link to="/PostWrite">게시글 쓰기</Link></button>
           <select>

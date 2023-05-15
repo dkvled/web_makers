@@ -48,7 +48,7 @@ export default function PostWrite() {
                 name="title"
               />
 
-            <div>
+            <div className='dateWrap2'>
               <input
                 className="dateWrap"
                 type="date"

@@ -147,7 +147,7 @@ export default function Signup() {
         </div>
         
       </div>
-      <div>
+      <div className='button'>
         <button disabled={notAllow} className="bottomButton"> 
           <Link to="/">회원가입 하기</Link>          
         </button>

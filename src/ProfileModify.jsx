@@ -76,7 +76,7 @@ function ProfileModify() {
           />
         </div>
       </div>
-      <div>
+      <div className='button'>
         <button className="bottomButton">변경</button>
       </div>
     </div>
