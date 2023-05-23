@@ -37,8 +37,6 @@ export default function PostWrite() {
         <div className="titleWrap2" style={{ marginTop: '20px' }}>
           게시글 작성
         </div>
-        
-
             <input
                 className="titleWrap3"
                 type="text"
@@ -52,11 +50,11 @@ export default function PostWrite() {
               <input
                 className="dateWrap"
                 type="date"
-                name="date"></input>~
+                name="day1"></input>~
                 <input
                 className="dateWrap"
                 type="date"
-                name="date"></input>
+                name="day2"></input>
             </div>
               
              <ReactQuill

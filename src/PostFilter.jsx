@@ -17,6 +17,30 @@ const PostFilter = () => {
       });
   }, []);
 
+    // 임시로 추가한 게시글 데이터
+    const tempPosts = [
+      {
+        id: 1,
+        title: '임시 게시글 1',
+        activityPeriod: '2023-05-17 ~ 2023-05-20',
+        content: '임시 게시글 내용 1',
+      },
+      {
+        id: 2,
+        title: '임시 게시글 2',
+        activityPeriod: '2023-05-18 ~ 2023-05-22',
+        content: '임시 게시글 내용 2',
+      },
+      {
+        id: 3,
+        title: '임시 게시글 3',
+        activityPeriod: '2023-05-19 ~ 2023-05-25',
+        content: '임시 게시글 내용 3',
+      },
+    ];
+
+    const mergedPosts = [...tempPosts, ...posts];
+
   return (
     <div className='page3'>
         <div className="post-filter">
@@ -29,25 +53,25 @@ const PostFilter = () => {
           <button>검색</button>
         </div>
 
-       <div className="post-list">
-        <ul>
+        <div className="post-list">
+      <ul>
+        <div className='post-setting'>
           <li>
-            <h3>글 번호</h3>
-            <h3>제목</h3>
-            <h3>등록일</h3>
-            <h3>조회수</h3>
+            <h3 style={{marginLeft:"30px"}}>제목</h3>
+            <h3 style={{marginRight:"500px"}}>활동 기간</h3>
           </li>
-          {posts.map((post, index) => (
-            <li key={post.id}>
-              <h3>{index + 1}</h3>
-              <h3>{post.title}</h3>
-              <h3>{new Date(post.createdAt).toLocaleDateString()}</h3>
-              <h3>{post.views}</h3>
-              <p>{post.content}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
+        </div>
+
+        {mergedPosts.map((post, index) => (
+          <li key={post.id}>
+            <div className="post-details">
+              <p style={{marginLeft:"30px"}}>{post.title}</p>
+            </div>
+            <p style={{marginRight:"400px"}}>{post.activityPeriod}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
     </div>
 );
 };
