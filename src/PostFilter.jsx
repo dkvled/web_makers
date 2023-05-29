@@ -65,7 +65,7 @@ const PostFilter = () => {
         {mergedPosts.map((post, index) => (
           <li key={post.id}>
             <div className="post-details">
-              <p style={{marginLeft:"30px"}}>{post.title}</p>
+              <Link to="/post" style={{marginLeft:"30px"}}>{post.title}</Link>
             </div>
             <p style={{marginRight:"400px"}}>{post.activityPeriod}</p>
           </li>

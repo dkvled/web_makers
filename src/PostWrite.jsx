@@ -50,7 +50,7 @@ export default function PostWrite() {
     formData.append('image', image);
 
     // POST 요청 보내기
-    axios.post('/add', formData)
+    axios.post('/add', formData, { headers: { 'Content-Type': 'multipart/form-data' } })
       .then(function (response) {
         // 요청이 성공한 경우 처리할 로직
         console.log(response.data);
